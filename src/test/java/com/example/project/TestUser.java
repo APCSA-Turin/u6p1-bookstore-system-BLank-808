@@ -22,7 +22,7 @@ public class TestUser {
         IdGenerate.reset(); //reset for test
         IdGenerate.generateID();
         User u1 = new User("John",IdGenerate.getCurrentId());
-        String expected = "Name: John\nId: 100\nBooks: \nempty\nempty\nempty\nempty\nempty\n";    
+        String expected = "Name: John\nId: 100\nBooks: \nempty\nempty\nempty\nempty\nempty\n";
         assertEquals(expected, u1.userInfo());
 
         IdGenerate.generateID();

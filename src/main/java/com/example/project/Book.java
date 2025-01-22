@@ -2,29 +2,64 @@ package com.example.project;
 
 public class Book{
     //requires 5 attributes String title, String author, int yearPublished, String isbn, int quantity
-
+    private String Title;
+    private String Author;
+    private int yearPublished;
+    private String ID;
+    int Quantity;
     //requires 1 constructor with 5 arguments that intitialize the attribtues of the class.
+    //constroctor
+    public Book(String title, String author, int yearPublished, String Isbn, int quantity){
+        Title=title;
+        Author = author;
+        this.yearPublished = yearPublished;
+        ID=Isbn;
+        Quantity=quantity;
+    }
 
-    // public  getTitle() {}
+    public String getTitle() {
+        return Title;
+    }
 
-    // public setTitle() {}
+    public void setTitle(String newTitle) {
+        Title=newTitle;
+    }
 
-    // public getAuthor() {}
+    public String getAuthor() {
+        return Author;
+    }
 
-    // public setAuthor() {}
+    public void setAuthor(String newAuthor) {
+        Author=newAuthor;
+    }
 
-    // public getYearPublished() {}
+    public int getYearPublished() {
+        return yearPublished;
+    }
 
-    // public setYearPublished() {}
+    public void setYearPublished(int newyear) {
+        yearPublished= newyear;
+    }
 
-    // public getIsbn() {}
+    public String getIsbn() {
+        return ID;
+    }
 
-    // public void setIsbn() {}
+    public void setIsbn(String newID) {
+        ID=newID;
+    }
 
-    // public int getQuantity() {}
+    public int getQuantity() {
+        return Quantity;
+    }
 
-    // public void setQuantity() {}
+    public void setQuantity(int newQ) {
+        Quantity=newQ;
+    }
 
-    // public  bookInfo(){} //returns "Title: [], Author: [], Year: [], ISBN: [], Quantity: []"
+    //returns "Title: [], Author: [], Year: [], ISBN: [], Quantity: []"
+    public String bookInfo(){
+        return "Title: "+ Title+", Author: "+Author+", Year: "+ yearPublished+", ISBN: "+ ID+", Quantity: "+Quantity;
+    } 
        
 }
