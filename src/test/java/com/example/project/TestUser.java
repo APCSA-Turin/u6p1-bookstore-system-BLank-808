@@ -36,7 +36,6 @@ public class TestUser {
         assertEquals(expected, u2.userInfo());
     }
 
-    
 
     
 }

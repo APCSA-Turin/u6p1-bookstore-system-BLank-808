@@ -31,8 +31,47 @@ public class User{
         return books;
     }
 
+    public Book getBookat(int i) {
+        return books[i];
+    }
+
     public void setBooks(Book[] b) {
         books=b;
+    }
+
+    public boolean addBook(Book b) {
+        boolean worked=false;
+        for (int i = 0; i < books.length; i++) {
+            if(books[i]==null){
+                books[i]=b.copy();
+                books[i].setQuantity(1);
+                worked=true;
+                break;
+            }
+        }
+        if (worked){
+            System.out.println("Successfully added copy to account");
+        }else{
+            System.out.println("Goes over account book limit, book not added;");
+        }
+        return worked;
+    }
+
+    public boolean removeBook(Book b) {
+        boolean worked=false;
+        for (int i = 0; i < books.length; i++) {
+            if(books[i].getTitle().equals(b.getTitle())){
+                books[i]=null;
+                worked=true                          ;
+                break;
+            }
+        }
+        if (worked){
+            System.out.println("Successfully removed book from account");
+        }else{
+            System.out.println("book not found in account");
+        }
+        return worked;
     }
 
     //returns a booklist for the user, if empty, output "empty"

@@ -57,9 +57,17 @@ public class Book{
         Quantity=newQ;
     }
 
+    public void addQuantity(int q){
+        Quantity+=q;
+    }
+
     //returns "Title: [], Author: [], Year: [], ISBN: [], Quantity: []"
     public String bookInfo(){
         return "Title: "+ Title+", Author: "+Author+", Year: "+ yearPublished+", ISBN: "+ ID+", Quantity: "+Quantity;
     } 
-       
+    
+    public Book copy(){
+        Book copy = new Book(Title, Author, yearPublished, ID, Quantity);
+        return copy; 
+    }
 }
